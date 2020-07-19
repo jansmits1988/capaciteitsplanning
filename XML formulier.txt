@@ -1,0 +1,1171 @@
+<?xml version = '1.0' encoding = 'WINDOWS-1252'?>
+<top id="top" seqmodel="3054" seqmodelversie="3135" type="specialisme" version="v1" name="DRW_WL_DETAILS" sdeversion="SDE.0.00" searchmode="edit" seqgroep="687" xnrwijz="13">
+   <description>Omschrijving Nieuwe Model Boom</description>
+   <subjectlist>
+      <subject id="patient" name="patient"/>
+      <subject id="specialist" name="specialist"/>
+   </subjectlist>
+   <config id="config">
+      <eforms>yes</eforms>
+      <readonlymodus>no</readonlymodus>
+      <formstyle>NXS_NG_lokaal</formstyle>
+   </config>
+   <elements id="elements">
+      <option id="x1573122149521V0" alias="MAIN" display="hide">
+         <name>Versie 1.0.0</name>
+         <description>---- Versienotes ----
+
+21-01-2020 JSM > Versie 1.0.1
+                 PROC_CP toegevoegd
+
+07-11-2019 NEM > Versie 1.0.0
+               - I1911 123 mi keuzelijst</description>
+         <style/>
+      </option>
+      <option id="x1567604641514V0" alias="OPT_METADATA" display="hide">
+         <name>METADATA</name>
+         <style/>
+         <option id="x1565958886167V0" alias="OPT_00_TITEL">
+            <name>Aanmelden activiteit</name>
+            <style>
+               <elementstyle id="NXP Titel formulier"/>
+            </style>
+         </option>
+         <content id="x1565979302941V0" alias="TXT_AANVRAGER" display="hide">
+            <name>Aanvrager</name>
+            <style>
+               <elementstyle id="Standaard"/>
+            </style>
+            <value>
+               <text/>
+            </value>
+         </content>
+         <behaviour>
+            <procedure onnewform="PROC_LOAD"/>
+            <procedure onreload="PROC_RELOAD"/>
+         </behaviour>
+      </option>
+      <option id="x1567604787037V0" alias="OPT_HULPVELDEN" display="hide">
+         <name>HULPVELDEN</name>
+         <style/>
+         <content id="x1565960503703V0" alias="SEQ_MODULE" display="hide">
+            <name>SEQ_MODULE</name>
+            <style>
+               <elementstyle id="Standaard"/>
+            </style>
+            <value>
+               <numeric/>
+            </value>
+         </content>
+         <content id="x1566027341939V0" alias="SEQLAATSTEBHP" display="hide">
+            <name>SEQLAATSTEBHP</name>
+            <style>
+               <elementstyle id="Standaard"/>
+            </style>
+            <value>
+               <numeric/>
+            </value>
+         </content>
+         <content id="x1565978435833V0" alias="SEQ_META_GEBRUIKER" display="hide">
+            <name>SEQ_META_GEBRUIKER</name>
+            <style/>
+            <value>
+               <numeric/>
+            </value>
+         </content>
+         <content id="x1566311514583V0" alias="SEQ_MED_CLIENT" display="hide">
+            <name>SEQ_MED_CLIENT</name>
+            <style/>
+            <value>
+               <numeric/>
+            </value>
+         </content>
+         <content id="x1566810144817V0" alias="hcDefinitief" display="hide">
+            <name>Status</name>
+            <style/>
+            <choicelist type="singleradio" width="">
+               <choice id="C">Concept</choice>
+               <choice id="D">Definitief</choice>
+            </choicelist>
+         </content>
+         <content id="x1566482789511V0" alias="SEQ_00_ZORGLEVERING" display="readonly">
+            <name>Zorglevering</name>
+            <style>
+               <elementstyle id="NXP Versienummer"/>
+               <childelementstyle id="NXP Titel formulier"/>
+            </style>
+            <value>
+               <text/>
+            </value>
+         </content>
+         <content id="x1573043986743V0" alias="KI">
+            <name>Topdesk KI</name>
+            <style/>
+            <value>
+               <text/>
+            </value>
+         </content>
+      </option>
+      <option id="x1565959549327V0" expandinline="yes" alias="C2_Algemeen">
+         <name>Algemeen</name>
+         <style>
+            <elementstyle id="NXP Clientgegevens"/>
+         </style>
+         <content id="x1565959574290V0" alias="TXT_00_NAAM_PAT" display="readonly">
+            <name>Naam patient</name>
+            <style>
+               <elementstyle id="Standaard"/>
+            </style>
+            <value>
+               <text/>
+            </value>
+         </content>
+         <content id="x1565960079035V0" alias="TXT_00_AFDELING_PAT" display="readonly">
+            <name>Afdeling</name>
+            <style>
+               <elementstyle id="Standaard"/>
+            </style>
+            <value>
+               <text/>
+            </value>
+         </content>
+         <content id="x1565975653692V0" alias="TXT_00_HB_PAT" display="readonly">
+            <name>Hoofdbehandelaar</name>
+            <style/>
+            <value>
+               <text/>
+            </value>
+         </content>
+         <content id="x1566304534964V0" alias="TXT_00_BHP_NRDT" display="readonly">
+            <name>Behandelplan</name>
+            <style>
+               <elementstyle id="Standaard"/>
+            </style>
+            <value>
+               <text/>
+            </value>
+         </content>
+         <content id="x1581598155832V0" alias="TXT_00_BNAAM" display="readonly">
+            <name>Aanvrager</name>
+            <style/>
+            <value>
+               <text/>
+            </value>
+         </content>
+         <content id="x1570617880471V0" alias="OPT_03_STATUS" saverequired="yes">
+            <name>Status formulier</name>
+            <style/>
+            <behaviour>
+               <procedure onchange="PROC_CP"/>
+            </behaviour>
+            <choicelist type="single" width="">
+               <choice id="AI">Activiteit inplannen (CP)</choice>
+               <choice id="AG">Activiteit gepland</choice>
+               <choice id="VOL">Voltooid status</choice>
+               <choice id="INC">Incompleet</choice>
+            </choicelist>
+         </content>
+      </option>
+      <option id="x1565960452257V0" expandinline="yes" alias="C3_aanmelden_activiteit">
+         <name>Aanmelden activiteit</name>
+         <style>
+            <elementstyle id="NXP Header 1"/>
+         </style>
+         <content id="x1565961695676V0" alias="TXT_00_ZorgModuleType" display="readonly">
+            <name>Zorgmoduletype</name>
+            <style>
+               <elementstyle id="Standaard"/>
+            </style>
+            <value>
+               <text/>
+            </value>
+         </content>
+         <content id="x1565962045209V0" alias="TXT_00_ZORGMODULE" display="readonly">
+            <name>Module</name>
+            <style>
+               <elementstyle id="Standaard"/>
+            </style>
+            <value>
+               <text/>
+            </value>
+         </content>
+         <content id="x1566206076022V0" display="readonly" alias="TXT_00_DOELEN_BHP" expandinline="yes">
+            <name>Doel(en) op discipline</name>
+            <style>
+               <elementstyle id="Standaard"/>
+            </style>
+            <value>
+               <text lines="5"/>
+            </value>
+         </content>
+         <content id="x1570690080165V0" alias="TXT_00_OPMERKINGHB" display="readonly">
+            <name>Opmerking HB BHP</name>
+            <style/>
+            <value>
+               <text lines="5"/>
+            </value>
+         </content>
+         <content id="x1565960554111V0" alias="TXT_00_ACTIVITEIT" saverequired="yes">
+            <name>Kies activiteit</name>
+            <style>
+               <elementstyle id="Standaard"/>
+            </style>
+            <choicelist type="single" width="">
+               <choice id="X">Geen activiteit(en) gekoppeld</choice>
+            </choicelist>
+         </content>
+         <option id="x1573119838745V0" alias="OPT_00_ZORGVERLENERS" multinstance="0" instanceid="1" instancecnt="1" expandinline="yes" navigtype="tablehor" horvalueonly="no" horcolumnwidth=",700,25,25">
+            <name>Medewerker</name>
+            <style>
+               <hortablestyle id="NXP Tabel genest no header"/>
+               <elementstyle id="NXP No Header"/>
+            </style>
+            <content id="x1565979496622V0" alias="HC_00_ZORGVERLENERS" expandinline="yes" saverequired="yes">
+               <name>Medewerker</name>
+               <style>
+                  <elementstyle id="Standaard"/>
+               </style>
+               <value/>
+               <choicelist type="single" width="500">
+                  <choice id="X">Geen gevonden</choice>
+               </choicelist>
+            </content>
+            <option id="x1573121811609V0" display="readonly">
+               <name>SPACER</name>
+               <style>
+                  <elementstyle id="NXP No Header"/>
+               </style>
+            </option>
+            <option id="x1573120968511V0" alias="BTN_00_ZORGVERLENER_DEL">
+               <name>Medewerker verwijderen</name>
+               <style>
+                  <elementstyle id="TabelCel"/>
+               </style>
+               <behaviour>
+                  <procedure onrequest="PROC_ZORGVERLENERS_DEL" imgname="ng__verwijderen_24" imgid="1573"/>
+               </behaviour>
+            </option>
+            <option id="x1573120931538V0" alias="BTN_00_ZORGVERLENER_ADD">
+               <name>Nog een medewerker toevoegen</name>
+               <style>
+                  <elementstyle id="TabelCel"/>
+               </style>
+               <behaviour>
+                  <procedure onrequest="PROC_ZORGVERLENERS_ADD" imgname="ng__toevoegen_24" imgid="1572"/>
+               </behaviour>
+            </option>
+            <option id="x1573121795301V0" display="readonly">
+               <name>SPACER</name>
+               <style>
+                  <elementstyle id="NXP No Header"/>
+               </style>
+            </option>
+            <behaviour/>
+         </option>
+         <content id="x1565989120982V0" alias="OPT_01_AANTAL_CONTACT" saverequired="yes">
+            <name>Aantal contactmomenten</name>
+            <description>&lt;b>Aantal contactmomenten:&lt;/b> Minimaal aantal behandelmomenten
+
+&lt;b>Frequentie:&lt;/b> Hoe vaak de behandeling per interval moet plaatsvinden.
+
+&lt;b>Interval:&lt;/b> Interval dat de behandeling plaats moeten vinden. (per dag/per week..)</description>
+            <style>
+               <elementstyle id="Standaard"/>
+            </style>
+            <value>
+               <numeric min="1" max="99"/>
+            </value>
+         </content>
+         <content id="x1565989768862V0" alias="OPT_01_FREQUENTIE_ACT" saverequired="yes">
+            <name>Frequentie</name>
+            <style>
+               <elementstyle id="Standaard"/>
+            </style>
+            <value/>
+            <choicelist type="single" width="">
+               <choice id="1">1</choice>
+               <choice id="2">2</choice>
+               <choice id="3">3</choice>
+               <choice id="4">4</choice>
+               <choice id="5">5</choice>
+               <choice id="6">6</choice>
+               <choice id="7">7</choice>
+               <choice id="8">8</choice>
+               <choice id="9">9</choice>
+               <choice id="10">10</choice>
+            </choicelist>
+         </content>
+         <content id="x1565989828167V0" alias="OPT_02_INTERVAL_ACT" saverequired="yes">
+            <name>Interval</name>
+            <style>
+               <elementstyle id="Standaard"/>
+            </style>
+            <value/>
+            <choicelist type="single" width="">
+               <choice id="D">Dag</choice>
+               <choice id="W">Week</choice>
+               <choice id="M">Maand</choice>
+               <choice id="J">Jaar</choice>
+            </choicelist>
+         </content>
+         <content id="x1565990832669V0" alias="TXT_01_Opmerking">
+            <name>Opmerking</name>
+            <style>
+               <elementstyle id="Standaard"/>
+            </style>
+            <value>
+               <text lines="6"/>
+            </value>
+         </content>
+         <content id="x1579612993931V0" alias="TXT_01_OPMERKINGCP">
+            <name>Aanvullende opmerking</name>
+            <style/>
+            <value>
+               <text lines="5" isclob="yes"/>
+            </value>
+         </content>
+      </option>
+   </elements>
+   <procedures id="procedures">
+      <procedure id="x1565959065065V0" alias="PROC_LOAD">
+         <name>PROC_LOAD</name>
+         <code>execLoadLibrary('ALG_Basis')
+ExecProc($PROC_DRWKLIK)
+ExecProc($PROC_BALK)
+
+
+// Indien betreffende gebruiker NIET de rol voor "FG_D_CP" heeft dan de knop 'Definitief' verbergen
+   ExecQuery($QRY_ROL_DEFINITIEF_MAKEN, $JN_ROL_DEFINITIEF_MAKEN);
+   if ($JN_ROL_DEFINITIEF_MAKEN === 'N'){
+      eforms().toolbar.removeRightButton('Definitief');
+   }
+
+  
+
+ExecQuery($QRY_ZVL,$TXT_00_BNAAM)
+ExecQuery($QRY_ZORGLEVERING,$SEQ_00_ZORGLEVERING)
+ExecQuery($QRY_AFDELING,$TXT_00_AFDELING_PAT)
+ExecQuery($QRY_PATIENT,$TXT_NAAM)
+ExecQuery($QRY_SEQMODULE,$SEQ_MODULE)
+ExecQuery($QRY_ZORGMODULE_TYPE,$SEQ_ZORM_TYPE)
+ExecQuery($QRY_ACTIVITEIT,$TXT_00_ACTIVITEIT)
+ExecQuery($QRY_EV_ZVL,$TXT_00_HB_PAT)
+ExecQuery($QRY_META_GEBRUIKER,$seq_meta_gebruiker)
+ExecQuery($QRY_ALG_ZORGVERLENER,$seq_alg_zorgverlener)
+
+for (var i=1; i &lt;= $OPT_00_ZORGVERLENERS.size; i++){
+   ExecQuery($QRY_ZORGVERLENERS,$HC_00_ZORGVERLENERS[i]);
+   SetReadOnly($BTN_00_ZORGVERLENER_DEL[i]);
+}
+
+ExecQuery($QRY_LAATSTE_BHP,$SEQLAATSTEBHP)
+ExecQuery($QRY_DOELEN_BHP,$TXT_00_DOELEN_BHP)
+ExecQuery($QRY_BHPNRDT,$TXTBHP)
+ExecQuery($QRY_OPMERKING,$TXT_00_OPMERKINGHB)
+SetChoiceOn($OPT_03_STATUS, 'AI')
+
+//Koppel unieke ID Kennisitem topdesk aan de helpfunctie
+Set($KI,"9e65cea80de144e68cfce39dd915c384")
+SetChoiceOn($TXT_00_ACTIVITEIT, $stckSDE_seq_activiteit);
+
+// Acties op basis van gekozen vervolgactie in DRW_WL_DETAILS
+   if ($stckSDE_vervolgactie &amp;&amp; $stckSDE_evaluatie){
+
+      Set($TXT_Opmerking, $stckSDE_evaluatie);
+
+      if ($stckSDE_vervolgactie === 'DOOR'){
+         alert('Let op: vervolgactie \'Doorplannen\' is gekozen');
+      }
+
+   }
+
+SetHide($TXT_01_OPMERKINGCP)</code>
+         <compiledcode>execLoadLibrary('ALG_Basis')
+_ExecProc('PROC_DRWKLIK')
+_ExecProc('PROC_BALK')
+
+
+   _ExecQuery('QRY_ROL_DEFINITIEF_MAKEN','JN_ROL_DEFINITIEF_MAKEN',0);
+   if (_Get('JN_ROL_DEFINITIEF_MAKEN',0) === 'N'){
+      eforms().toolbar.removeRightButton('Definitief');
+   }
+
+  
+
+_ExecQuery('QRY_ZVL','TXT_00_BNAAM',0)
+_ExecQuery('QRY_ZORGLEVERING','SEQ_00_ZORGLEVERING',0)
+_ExecQuery('QRY_AFDELING','TXT_00_AFDELING_PAT',0)
+_ExecQuery('QRY_PATIENT','TXT_NAAM',0)
+_ExecQuery('QRY_SEQMODULE','SEQ_MODULE',0)
+_ExecQuery('QRY_ZORGMODULE_TYPE','SEQ_ZORM_TYPE',0)
+_ExecQuery('QRY_ACTIVITEIT','TXT_00_ACTIVITEIT',0)
+_ExecQuery('QRY_EV_ZVL','TXT_00_HB_PAT',0)
+_ExecQuery('QRY_META_GEBRUIKER','seq_meta_gebruiker',0)
+_ExecQuery('QRY_ALG_ZORGVERLENER','seq_alg_zorgverlener',0)
+
+for (var i=1; i &lt;= _Get('OPT_00_ZORGVERLENERS.size',0); i++){
+   _ExecQuery('QRY_ZORGVERLENERS','HC_00_ZORGVERLENERS',i);
+   _SetDisplay('BTN_00_ZORGVERLENER_DEL',i,'readonly');
+}
+
+_ExecQuery('QRY_LAATSTE_BHP','SEQLAATSTEBHP',0)
+_ExecQuery('QRY_DOELEN_BHP','TXT_00_DOELEN_BHP',0)
+_ExecQuery('QRY_BHPNRDT','TXTBHP',0)
+_ExecQuery('QRY_OPMERKING','TXT_00_OPMERKINGHB',0)
+_SetChoiceOn('OPT_03_STATUS',0, 'AI')
+
+_Set('KI',0,"9e65cea80de144e68cfce39dd915c384")
+_SetChoiceOn('TXT_00_ACTIVITEIT',0, _Get('stckSDE_seq_activiteit',0));
+
+   if (_Get('stckSDE_vervolgactie',0) &amp;&amp; _Get('stckSDE_evaluatie',0)){
+
+      _Set('TXT_Opmerking',0, _Get('stckSDE_evaluatie',0));
+
+      if (_Get('stckSDE_vervolgactie',0) === 'DOOR'){
+         alert('Let op: vervolgactie \'Doorplannen\' is gekozen');
+      }
+
+   }
+
+_SetDisplay('TXT_01_OPMERKINGCP',0,'hide')</compiledcode>
+      </procedure>
+      <procedure id="x1566471940140V0" alias="PROC_RELOAD">
+         <name>PROC_RELOAD</name>
+         <code>execLoadLibrary('ALG_Basis')
+ExecProc($PROC_DRWKLIK)
+ExecProc($PROC_BALK)
+
+// Indien betreffende gebruiker NIET de rol voor "FG_D_CP" heeft dan de knop 'Definitief' verbergen
+   ExecQuery($QRY_ROL_DEFINITIEF_MAKEN, $JN_ROL_DEFINITIEF_MAKEN);
+   if ($JN_ROL_DEFINITIEF_MAKEN === 'N'){
+      eforms().toolbar.removeRightButton('Definitief');
+   }
+
+
+//ExecQuery($QRY_SEQMODULE,$SEQ_MODULE)
+ExecQuery($QRY_AFDELING,$TXT_00_AFDELING_PAT)
+ExecQuery($QRY_ZORGMODULE_TYPE,$SEQ_ZORM_TYPE)
+ExecQuery($QRY_ACTIVITEIT,$TXT_00_ACTIVITEIT)
+ExecQuery($QRY_META_GEBRUIKER,$seq_meta_gebruiker)
+ExecQuery($QRY_ALG_ZORGVERLENER,$seq_alg_zorgverlener)
+
+for (var i=1; i &lt;= $OPT_00_ZORGVERLENERS.size; i++){
+   ExecQuery($QRY_ZORGVERLENERS,$HC_00_ZORGVERLENERS[i]);
+}
+
+ExecQuery($QRY_LAATSTE_BHP,$SEQLAATSTEBHP)
+ExecQuery($QRY_DOELEN_BHP,$TXT_00_DOELEN_BHP)
+ExecQuery($QRY_OPMERKING,$TXT_00_OPMERKINGHB)
+ExecQuery($QRY_BHPNRDT,$TXTBHP)
+ExecProc($PROC_EDIT);
+Set($KI,"9e65cea80de144e68cfce39dd915c384")</code>
+         <compiledcode>execLoadLibrary('ALG_Basis')
+_ExecProc('PROC_DRWKLIK')
+_ExecProc('PROC_BALK')
+
+   _ExecQuery('QRY_ROL_DEFINITIEF_MAKEN','JN_ROL_DEFINITIEF_MAKEN',0);
+   if (_Get('JN_ROL_DEFINITIEF_MAKEN',0) === 'N'){
+      eforms().toolbar.removeRightButton('Definitief');
+   }
+
+
+_ExecQuery('QRY_AFDELING','TXT_00_AFDELING_PAT',0)
+_ExecQuery('QRY_ZORGMODULE_TYPE','SEQ_ZORM_TYPE',0)
+_ExecQuery('QRY_ACTIVITEIT','TXT_00_ACTIVITEIT',0)
+_ExecQuery('QRY_META_GEBRUIKER','seq_meta_gebruiker',0)
+_ExecQuery('QRY_ALG_ZORGVERLENER','seq_alg_zorgverlener',0)
+
+for (var i=1; i &lt;= _Get('OPT_00_ZORGVERLENERS.size',0); i++){
+   _ExecQuery('QRY_ZORGVERLENERS','HC_00_ZORGVERLENERS',i);
+}
+
+_ExecQuery('QRY_LAATSTE_BHP','SEQLAATSTEBHP',0)
+_ExecQuery('QRY_DOELEN_BHP','TXT_00_DOELEN_BHP',0)
+_ExecQuery('QRY_OPMERKING','TXT_00_OPMERKINGHB',0)
+_ExecQuery('QRY_BHPNRDT','TXTBHP',0)
+_ExecProc('PROC_EDIT');
+_Set('KI',0,"9e65cea80de144e68cfce39dd915c384")</compiledcode>
+      </procedure>
+      <procedure id="x1566884816889V0" alias="PROC_EDIT">
+         <name>PROC_EDIT</name>
+         <code>// Kliniek
+if ($OPT_03_STATUS.choicesnoq == 'AI'){
+
+// Specifieke velden read only maken
+SetReadOnly($TXT_01_Opmerking)
+SetReadOnly($TXT_00_ACTIVITEIT)
+SetReadOnly($TXT_00_ZORGVERLENERS)
+SetReadOnly($OPT_01_AANTAL_CONTACT)
+SetReadOnly($OPT_01_FREQUENTIE_ACT)
+SetReadOnly($OPT_02_INTERVAL_ACT)
+}</code>
+         <compiledcode>if (_Get('OPT_03_STATUS.choicesnoq',0) == 'AI'){
+
+_SetDisplay('TXT_01_Opmerking',0,'readonly')
+_SetDisplay('TXT_00_ACTIVITEIT',0,'readonly')
+_SetDisplay('TXT_00_ZORGVERLENERS',0,'readonly')
+_SetDisplay('OPT_01_AANTAL_CONTACT',0,'readonly')
+_SetDisplay('OPT_01_FREQUENTIE_ACT',0,'readonly')
+_SetDisplay('OPT_02_INTERVAL_ACT',0,'readonly')
+}</compiledcode>
+      </procedure>
+      <procedure id="x1573120056265V0" alias="PROC_ZORGVERLENERS_ADD">
+         <name>PROC_ZORGVERLENERS_ADD</name>
+         <code>// Zorgverlener toevoegen
+   AddInst($OPT_00_ZORGVERLENERS,1);
+
+// Vul na het toevoegen van een nieuwe instantie de dropdown
+   var i = $OPT_00_ZORGVERLENERS.size;
+   ExecQuery($QRY_ZORGVERLENERS,$HC_00_ZORGVERLENERS[i]);
+
+// Tonen/verbergen knoppen
+   for (var i=1; i &lt;= $OPT_00_ZORGVERLENERS.size; i++){
+      if ($OPT_00_ZORGVERLENERS.size === i){
+         SetEdit($BTN_00_ZORGVERLENER_ADD[i]);
+      }else{
+         SetHide($BTN_00_ZORGVERLENER_ADD[i]);
+      }
+   }
+
+   if ($OPT_00_ZORGVERLENERS.size === 1){
+      SetReadOnly($BTN_00_ZORGVERLENER_DEL[1]);
+   }else{
+      SetEdit($BTN_00_ZORGVERLENER_DEL[1]);
+   }</code>
+         <compiledcode>   _AddInst('OPT_00_ZORGVERLENERS',0,1);
+
+   var i = _Get('OPT_00_ZORGVERLENERS.size',0);
+   _ExecQuery('QRY_ZORGVERLENERS','HC_00_ZORGVERLENERS',i);
+
+   for (var i=1; i &lt;= _Get('OPT_00_ZORGVERLENERS.size',0); i++){
+      if (_Get('OPT_00_ZORGVERLENERS.size',0) === i){
+         _SetDisplay('BTN_00_ZORGVERLENER_ADD',i,'');
+      }else{
+         _SetDisplay('BTN_00_ZORGVERLENER_ADD',i,'hide');
+      }
+   }
+
+   if (_Get('OPT_00_ZORGVERLENERS.size',0) === 1){
+      _SetDisplay('BTN_00_ZORGVERLENER_DEL',1,'readonly');
+   }else{
+      _SetDisplay('BTN_00_ZORGVERLENER_DEL',1,'');
+   }</compiledcode>
+      </procedure>
+      <procedure id="x1573121070616V0" alias="PROC_ZORGVERLENERS_DEL">
+         <name>PROC_ZORGVERLENERS_DEL</name>
+         <code>// Zorgverlener verwijderen
+   var i = $BTN_00_ZORGVERLENER_DEL.instid;
+   DelInst($OPT_00_ZORGVERLENERS,i);
+
+// Tonen/verbergen knoppen
+   for (var i=1; i &lt;= $OPT_00_ZORGVERLENERS.size; i++){
+      if ($OPT_00_ZORGVERLENERS.size === i){
+         SetEdit($BTN_00_ZORGVERLENER_ADD[i]);
+      }else{
+         SetHide($BTN_00_ZORGVERLENER_ADD[i]);
+      }
+
+   }
+
+   if ($OPT_00_ZORGVERLENERS.size === 1){
+      SetReadOnly($BTN_00_ZORGVERLENER_DEL[1]);
+   }else{
+      SetEdit($BTN_00_ZORGVERLENER_DEL[1]);
+   }</code>
+         <compiledcode>   var i = _Get('BTN_00_ZORGVERLENER_DEL.instid',0);
+   _DelInst('OPT_00_ZORGVERLENERS',0,i);
+
+   for (var i=1; i &lt;= _Get('OPT_00_ZORGVERLENERS.size',0); i++){
+      if (_Get('OPT_00_ZORGVERLENERS.size',0) === i){
+         _SetDisplay('BTN_00_ZORGVERLENER_ADD',i,'');
+      }else{
+         _SetDisplay('BTN_00_ZORGVERLENER_ADD',i,'hide');
+      }
+
+   }
+
+   if (_Get('OPT_00_ZORGVERLENERS.size',0) === 1){
+      _SetDisplay('BTN_00_ZORGVERLENER_DEL',1,'readonly');
+   }else{
+      _SetDisplay('BTN_00_ZORGVERLENER_DEL',1,'');
+   }</compiledcode>
+      </procedure>
+      <procedure id="x1579613175215V0" alias="PROC_CP">
+         <name>PROC_CP</name>
+         <code>if ($OPT_03_STATUS.choicesnoq === 'INC'){
+SetEdit($TXT_01_OPMERKINGCP)}</code>
+         <compiledcode>if (_Get('OPT_03_STATUS.choicesnoq',0) === 'INC'){
+_SetDisplay('TXT_01_OPMERKINGCP',0,'')}</compiledcode>
+      </procedure>
+   </procedures>
+   <queries id="queries">
+      <query id="x1565959353643V0" alias="QRY_PATIENT">
+         <name>QRY_PATIENT</name>
+         <code>select mc.SEQ_MED_CLIENT, voorletters|| ' '||decode(voorvoegsels,'','',voorvoegsels||' ')||nm_client || ' (geb. ' || d_geboorte || ')' as PATIENT
+from med_client mc where mc.seq_med_client = $patient
+
+into $SEQ_MED_CLIENT
+,$TXT_00_NAAM_PAT</code>
+         <compiledcode>
+            <sql>select mc.SEQ_MED_CLIENT, voorletters|| ' '||decode(voorvoegsels,'','',voorvoegsels||' ')||nm_client || ' (geb. ' || d_geboorte || ')' as PATIENT
+from med_client mc where mc.seq_med_client = @1
+
+</sql>
+            <bindlist>
+               <bind idx="1">patient</bind>
+            </bindlist>
+            <intolist>
+               <into idx="1">SEQ_MED_CLIENT</into>
+               <into idx="2">TXT_00_NAAM_PAT</into>
+            </intolist>
+         </compiledcode>
+      </query>
+      <query id="x1565964441426V0" alias="QRY_SEQMODULE">
+         <name>QRY_SEQMODULE</name>
+         <code>SELECT ALG_ZORGMODULE.SEQ_ALG_ZORGMODULE,
+  ALG_ZORGMODULE.O_ZORGMODULE
+FROM ALG_ZORGMODULE
+INNER JOIN dwh_user.VW_FCT_ZORGLEVERING
+ON ALG_ZORGMODULE.SEQ_ALG_ZORGMODULE = dwh_user.VW_FCT_ZORGLEVERING.DIM_MODULE
+where dwh_user.VW_FCT_ZORGLEVERING.DIM_ZORGLEVERING = $zorglevering
+and to_date(dwh_user.VW_FCT_ZORGLEVERING.DIM_DAG, 'yyyymmdd') = trunc(sysdate)
+
+into $SEQ_MODULE, $TXT_00_ZORGMODULE</code>
+         <compiledcode>
+            <sql>SELECT ALG_ZORGMODULE.SEQ_ALG_ZORGMODULE,
+  ALG_ZORGMODULE.O_ZORGMODULE
+FROM ALG_ZORGMODULE
+INNER JOIN dwh_user.VW_FCT_ZORGLEVERING
+ON ALG_ZORGMODULE.SEQ_ALG_ZORGMODULE = dwh_user.VW_FCT_ZORGLEVERING.DIM_MODULE
+where dwh_user.VW_FCT_ZORGLEVERING.DIM_ZORGLEVERING = @1
+and to_date(dwh_user.VW_FCT_ZORGLEVERING.DIM_DAG, 'yyyymmdd') = trunc(sysdate)
+
+</sql>
+            <bindlist>
+               <bind idx="1">zorglevering</bind>
+            </bindlist>
+            <intolist>
+               <into idx="1">SEQ_MODULE</into>
+               <into idx="2">TXT_00_ZORGMODULE</into>
+            </intolist>
+         </compiledcode>
+      </query>
+      <query id="x1565959656863V0" alias="QRY_AFDELING">
+         <name>QRY_AFDELING</name>
+         <code>select o_afdeling
+from alg_afdeling afd, med_kamerplaatsing mk, med_aanmelding ma, alg_kamer ak, med_client cl
+where afd.seq_alg_afdeling = ak.seq_alg_afdeling
+and ak.seq_alg_kamer = mk.seq_alg_kamer
+and ma.seq_med_aanmelding = mk.seq_med_aanmelding
+and ma.seq_med_client_x = seq_to_pid(cl.seq_med_client)
+and cl.seq_med_client = $patient 
+and ma.dt_uitschrijving is null
+and (mk.dt_einde is null or mk.dt_einde > sysdate)
+
+into $TXT_00_AFDELING_PAT</code>
+         <compiledcode>
+            <sql>select o_afdeling
+from alg_afdeling afd, med_kamerplaatsing mk, med_aanmelding ma, alg_kamer ak, med_client cl
+where afd.seq_alg_afdeling = ak.seq_alg_afdeling
+and ak.seq_alg_kamer = mk.seq_alg_kamer
+and ma.seq_med_aanmelding = mk.seq_med_aanmelding
+and ma.seq_med_client_x = seq_to_pid(cl.seq_med_client)
+and cl.seq_med_client = @1 
+and ma.dt_uitschrijving is null
+and (mk.dt_einde is null or mk.dt_einde > sysdate)
+
+</sql>
+            <bindlist>
+               <bind idx="1">patient</bind>
+            </bindlist>
+            <intolist>
+               <into idx="1">TXT_00_AFDELING_PAT</into>
+            </intolist>
+         </compiledcode>
+      </query>
+      <query id="x1565961560198V0" alias="QRY_ZORGMODULE_TYPE">
+         <name>QRY_ZORGMODULE_TYPE</name>
+         <code>SELECT zm.SEQ_ALG_ZORGMODULE_TYPE, zmt.O_ZORGMODULE_TYPE
+FROM alg_zorgmodule zm
+INNER JOIN alg_zorgmodule_type zmt
+ON zmt.SEQ_ALG_ZORGMODULE_TYPE = zm.SEQ_ALG_ZORGMODULE_TYPE
+WHERE zm.SEQ_ALG_ZORGMODULE    = $SEQ_MODULE
+
+into $SEQ_ZORM_TYPE,$TXT_00_ZorgModuleType</code>
+         <compiledcode>
+            <sql>SELECT zm.SEQ_ALG_ZORGMODULE_TYPE, zmt.O_ZORGMODULE_TYPE
+FROM alg_zorgmodule zm
+INNER JOIN alg_zorgmodule_type zmt
+ON zmt.SEQ_ALG_ZORGMODULE_TYPE = zm.SEQ_ALG_ZORGMODULE_TYPE
+WHERE zm.SEQ_ALG_ZORGMODULE    = @1
+
+</sql>
+            <bindlist>
+               <bind idx="1">SEQ_MODULE</bind>
+            </bindlist>
+            <intolist>
+               <into idx="1">SEQ_ZORM_TYPE</into>
+               <into idx="2">TXT_00_ZorgModuleType</into>
+            </intolist>
+         </compiledcode>
+      </query>
+      <query id="x1565974119512V0" alias="QRY_ACTIVITEIT">
+         <name>QRY_ACTIVITEIT</name>
+         <code>SELECT  AGA_ACTIVITEIT.SEQ_AGA_ACTIVITEIT, AGA_ACTIVITEIT.O_ACTIVITEIT || ' (' ||  AGA_ACTIV_STD_TIJD.DUUR_ACTIVITEIT_STD || ')' 
+FROM AGA_ACTIV_PER_ZORGM
+INNER JOIN AGA_ACTIVITEIT
+ON AGA_ACTIVITEIT.SEQ_AGA_ACTIVITEIT = AGA_ACTIV_PER_ZORGM.SEQ_AGA_ACTIVITEIT
+INNER JOIN AGA_ACTIV_STD_TIJD
+ON AGA_ACTIV_STD_TIJD.SEQ_AGA_ACTIVITEIT = AGA_ACTIVITEIT.SEQ_AGA_ACTIVITEIT
+WHERE AGA_ACTIV_PER_ZORGM.SEQ_ALG_ZORGMODULE    = $SEQ_MODULE
+AND AGA_ACTIV_PER_ZORGM.D_EINDE                IS NULL
+AND AGA_ACTIVITEIT.D_EINDE                     IS NULL</code>
+         <compiledcode>
+            <sql>SELECT  AGA_ACTIVITEIT.SEQ_AGA_ACTIVITEIT, AGA_ACTIVITEIT.O_ACTIVITEIT || ' (' ||  AGA_ACTIV_STD_TIJD.DUUR_ACTIVITEIT_STD || ')' 
+FROM AGA_ACTIV_PER_ZORGM
+INNER JOIN AGA_ACTIVITEIT
+ON AGA_ACTIVITEIT.SEQ_AGA_ACTIVITEIT = AGA_ACTIV_PER_ZORGM.SEQ_AGA_ACTIVITEIT
+INNER JOIN AGA_ACTIV_STD_TIJD
+ON AGA_ACTIV_STD_TIJD.SEQ_AGA_ACTIVITEIT = AGA_ACTIVITEIT.SEQ_AGA_ACTIVITEIT
+WHERE AGA_ACTIV_PER_ZORGM.SEQ_ALG_ZORGMODULE    = @1
+AND AGA_ACTIV_PER_ZORGM.D_EINDE                IS NULL
+AND AGA_ACTIVITEIT.D_EINDE                     IS NULL</sql>
+            <bindlist>
+               <bind idx="1">SEQ_MODULE</bind>
+            </bindlist>
+            <intolist/>
+         </compiledcode>
+      </query>
+      <query id="x1565975546316V0" alias="QRY_EV_ZVL">
+         <name>QRY_EV_ZVL</name>
+         <code>select syntax.zorgverlener(e.seq_alg_zorgverlener)
+
+from med_client c, med_aanmelding a, med_zorgcasus z, med_eindverantwoording e
+where seq_to_pid(c.seq_med_client) = a.seq_med_client_x
+and c.seq_med_client = $patient
+and a.seq_med_aanmelding = z.seq_med_aanmelding 
+and e.seq_med_zorgcasus (+)= z.seq_med_zorgcasus 
+and e.y_dt_einde (+) is null
+and a.dt_uitschrijving is null
+
+into $TXT_00_HB_PAT</code>
+         <compiledcode>
+            <sql>select syntax.zorgverlener(e.seq_alg_zorgverlener)
+
+from med_client c, med_aanmelding a, med_zorgcasus z, med_eindverantwoording e
+where seq_to_pid(c.seq_med_client) = a.seq_med_client_x
+and c.seq_med_client = @1
+and a.seq_med_aanmelding = z.seq_med_aanmelding 
+and e.seq_med_zorgcasus (+)= z.seq_med_zorgcasus 
+and e.y_dt_einde (+) is null
+and a.dt_uitschrijving is null
+
+</sql>
+            <bindlist>
+               <bind idx="1">patient</bind>
+            </bindlist>
+            <intolist>
+               <into idx="1">TXT_00_HB_PAT</into>
+            </intolist>
+         </compiledcode>
+      </query>
+      <query id="x1565978482046V0" alias="QRY_META_GEBRUIKER">
+         <name>QRY_META_GEBRUIKER</name>
+         <code>select mg.seq_meta_gebruiker
+from meta_gebruiker mg
+where upper(mg.c_gebruiker) = upper('$gebruiker')
+
+into $seq_meta_gebruiker</code>
+         <compiledcode>
+            <sql>select mg.seq_meta_gebruiker
+from meta_gebruiker mg
+where upper(mg.c_gebruiker) = upper('@1')
+
+</sql>
+            <bindlist>
+               <bind idx="1">gebruiker</bind>
+            </bindlist>
+            <intolist>
+               <into idx="1">seq_meta_gebruiker</into>
+            </intolist>
+         </compiledcode>
+      </query>
+      <query id="x1565979265845V0" alias="QRY_ALG_ZORGVERLENER">
+         <name>QRY_ALG_ZORGVERLENER</name>
+         <code>SELECT ALG_PERSOON.NM_PERSOON
+  || ' '
+  || ALG_PERSOON.VOORVOEGSELS
+  || ', '
+  || ALG_PERSOON.NM_ROEPNAAM
+  || ' ('
+  || META_GEBRUIKER.C_GEBRUIKER
+  || ')'
+FROM ALG_PERSOON
+INNER JOIN META_GEBRUIKER
+ON META_GEBRUIKER.SEQ_ALG_PERSOON = ALG_PERSOON.SEQ_ALG_PERSOON
+where upper(META_GEBRUIKER.C_GEBRUIKER) = upper('$gebruiker')
+
+into $TXT_AANVRAGER</code>
+         <compiledcode>
+            <sql>SELECT ALG_PERSOON.NM_PERSOON
+  || ' '
+  || ALG_PERSOON.VOORVOEGSELS
+  || ', '
+  || ALG_PERSOON.NM_ROEPNAAM
+  || ' ('
+  || META_GEBRUIKER.C_GEBRUIKER
+  || ')'
+FROM ALG_PERSOON
+INNER JOIN META_GEBRUIKER
+ON META_GEBRUIKER.SEQ_ALG_PERSOON = ALG_PERSOON.SEQ_ALG_PERSOON
+where upper(META_GEBRUIKER.C_GEBRUIKER) = upper('@1')
+
+</sql>
+            <bindlist>
+               <bind idx="1">gebruiker</bind>
+            </bindlist>
+            <intolist>
+               <into idx="1">TXT_AANVRAGER</into>
+            </intolist>
+         </compiledcode>
+      </query>
+      <query id="x1565985163405V0" alias="QRY_ZORGVERLENERS">
+         <name>QRY_ZORGVERLENERS</name>
+         <code>/* ALLE ZORGVERLENERS
+SELECT ALG_ZORGVERLENER.SEQ_ALG_ZORGVERLENER,
+ALG_PERSOON.NM_PERSOON || ' ' || ALG_PERSOON.VOORVOEGSELS || ', ' || ALG_PERSOON.NM_ROEPNAAM || ' (' || ALG_ZORGVERLENER.C_ZORGVERLENER || ')' 
+FROM ALG_ZORGVERLENER
+INNER JOIN ALG_PERSOON
+ON ALG_PERSOON.SEQ_ALG_PERSOON        = ALG_ZORGVERLENER.SEQ_ALG_PERSOON
+WHERE ALG_ZORGVERLENER.D_EINDE         IS NULL
+AND ALG_PERSOON.NM_PERSOON not like '%orgverlener%'
+AND ALG_PERSOON.NM_PERSOON not like '%eneriek%'
+
+ORDER BY 2
+*/
+SELECT DISTINCT zvl.SEQ_ALG_ZORGVERLENER,
+  syntax.zorgverlener(zvl.SEQ_ALG_ZORGVERLENER, 'DO')
+FROM alg_afdeling afd,
+  alg_team tea,
+  alg_team_samenstelling ats,
+  alg_zorgverlener zvl,
+  alg_specialisatie spe,
+  alg_zorgv_per zvp
+WHERE afd.SEQ_ALG_AFDELING     = tea.SEQ_ALG_AFDELING
+AND tea.SEQ_ALG_TEAM           = ats.SEQ_ALG_TEAM
+AND ats.SEQ_ALG_ZORGVERLENER   = zvl.SEQ_ALG_ZORGVERLENER
+AND zvl.SEQ_ALG_ZORGVERLENER   = zvp.SEQ_ALG_ZORGVERLENER
+AND zvp.SEQ_ALG_SPECIALISATIE  = spe.SEQ_ALG_SPECIALISATIE
+AND afd.O_AFDELING             = 'Therapeutische Dienst'
+AND NVL(tea.D_EINDE, SysDate) >= SysDate
+AND NVL(ats.D_EINDE, SysDate) >= SysDate
+AND NVL(zvl.D_EINDE, SysDate) >= SysDate
+AND NVL(zvp.D_EINDE, SysDate) >= SysDate
+AND zvl.C_ZORGVERLENER        >= 10000
+ORDER BY syntax.zorgverlener(zvl.SEQ_ALG_ZORGVERLENER, 'DO')
+</code>
+         <compiledcode>
+            <sql>/* ALLE ZORGVERLENERS
+SELECT ALG_ZORGVERLENER.SEQ_ALG_ZORGVERLENER,
+ALG_PERSOON.NM_PERSOON || ' ' || ALG_PERSOON.VOORVOEGSELS || ', ' || ALG_PERSOON.NM_ROEPNAAM || ' (' || ALG_ZORGVERLENER.C_ZORGVERLENER || ')' 
+FROM ALG_ZORGVERLENER
+INNER JOIN ALG_PERSOON
+ON ALG_PERSOON.SEQ_ALG_PERSOON        = ALG_ZORGVERLENER.SEQ_ALG_PERSOON
+WHERE ALG_ZORGVERLENER.D_EINDE         IS NULL
+AND ALG_PERSOON.NM_PERSOON not like '%orgverlener%'
+AND ALG_PERSOON.NM_PERSOON not like '%eneriek%'
+
+ORDER BY 2
+*/
+SELECT DISTINCT zvl.SEQ_ALG_ZORGVERLENER,
+  syntax.zorgverlener(zvl.SEQ_ALG_ZORGVERLENER, 'DO')
+FROM alg_afdeling afd,
+  alg_team tea,
+  alg_team_samenstelling ats,
+  alg_zorgverlener zvl,
+  alg_specialisatie spe,
+  alg_zorgv_per zvp
+WHERE afd.SEQ_ALG_AFDELING     = tea.SEQ_ALG_AFDELING
+AND tea.SEQ_ALG_TEAM           = ats.SEQ_ALG_TEAM
+AND ats.SEQ_ALG_ZORGVERLENER   = zvl.SEQ_ALG_ZORGVERLENER
+AND zvl.SEQ_ALG_ZORGVERLENER   = zvp.SEQ_ALG_ZORGVERLENER
+AND zvp.SEQ_ALG_SPECIALISATIE  = spe.SEQ_ALG_SPECIALISATIE
+AND afd.O_AFDELING             = 'Therapeutische Dienst'
+AND NVL(tea.D_EINDE, SysDate) >= SysDate
+AND NVL(ats.D_EINDE, SysDate) >= SysDate
+AND NVL(zvl.D_EINDE, SysDate) >= SysDate
+AND NVL(zvp.D_EINDE, SysDate) >= SysDate
+AND zvl.C_ZORGVERLENER        >= 10000
+ORDER BY syntax.zorgverlener(zvl.SEQ_ALG_ZORGVERLENER, 'DO')
+</sql>
+            <bindlist/>
+            <intolist/>
+         </compiledcode>
+      </query>
+      <query id="x1566028550634V0" alias="QRY_LAATSTE_BHP">
+         <name>QRY_LAATSTE_BHP</name>
+         <code>select max(xns.seq_xnt_model_data)
+from xnt_node_specialisme xns
+, xnt_model_versie xmv
+, xnt_model xm
+where xns.seq_xnt_model_versie = xmv.seq_xnt_model_versie
+and (xm.c_model = 'HB_Behandelplan'
+                 -- or xm.c_model = 'HB_Opnameplan'
+                  -- or xm.c_model = 'HB_Behandelplan_BOPZ'
+                  -- or xm.c_model = 'RIBW_BHP_Schakel'
+    )
+and xmv.seq_xnt_model = xm.seq_xnt_model
+and xns.alias = 'top'
+and xns.seq_patient = $patient
+and (xnt_query_pkg.node_keuzes_code(xns.seq_xnt_model_data,'hcDefinitief', xns.instantie_volgnr) = 'D'
+or xnt_query_pkg.node_keuzes_code(xns.seq_xnt_model_data,'jnDoelenDefinitief', xns.instantie_volgnr) = 'J')
+
+into $SEQLAATSTEBHP</code>
+         <compiledcode>
+            <sql>select max(xns.seq_xnt_model_data)
+from xnt_node_specialisme xns
+, xnt_model_versie xmv
+, xnt_model xm
+where xns.seq_xnt_model_versie = xmv.seq_xnt_model_versie
+and (xm.c_model = 'HB_Behandelplan'
+                 -- or xm.c_model = 'HB_Opnameplan'
+                  -- or xm.c_model = 'HB_Behandelplan_BOPZ'
+                  -- or xm.c_model = 'RIBW_BHP_Schakel'
+    )
+and xmv.seq_xnt_model = xm.seq_xnt_model
+and xns.alias = 'top'
+and xns.seq_patient = @1
+and (xnt_query_pkg.node_keuzes_code(xns.seq_xnt_model_data,'hcDefinitief', xns.instantie_volgnr) = 'D'
+or xnt_query_pkg.node_keuzes_code(xns.seq_xnt_model_data,'jnDoelenDefinitief', xns.instantie_volgnr) = 'J')
+
+</sql>
+            <bindlist>
+               <bind idx="1">patient</bind>
+            </bindlist>
+            <intolist>
+               <into idx="1">SEQLAATSTEBHP</into>
+            </intolist>
+         </compiledcode>
+      </query>
+      <query id="x1566027399147V0" alias="QRY_DOELEN_BHP">
+         <name>QRY_DOELEN_BHP</name>
+         <code>/* oude code
+SELECT DISTINCT substr(nos.instantie_volgnr,0,3), xnt_query_pkg.node_waarde(nos.seq_xnt_model_data,'mmoBehandeldoel_RWLoc' , substr(nos.instantie_volgnr,0,3)) 
+
+FROM   xnt_node_specialisme nos
+WHERE
+	seq_xnt_model_data = $SEQLAATSTEBHP
+			and nos.alias='hcDiscipline_RWLoc'
+	and xnt_query_pkg.node_keuzes_code(nos.seq_xnt_model_data,'hcDiscipline_RWLoc' , nos.instantie_volgnr) in ($SEQ_ZORM_TYPE)
+order by 2
+*/
+  SELECT LISTAGG('[X] ' || test, chr(10)) WITHIN GROUP (ORDER BY test DESC) "Product_Listing"
+   from (select
+  DISTINCT xnt_query_pkg.node_waarde(nos.seq_xnt_model_data,'mmoBehandeldoel_RWLoc' , substr(nos.instantie_volgnr,0,3)) as test
+  from xnt_node_specialisme nos
+WHERE
+	seq_xnt_model_data = $SEQLAATSTEBHP
+			and nos.alias='hcDiscipline_RWLoc'
+	and xnt_query_pkg.node_keuzes_code(nos.seq_xnt_model_data,'hcDiscipline_RWLoc' , nos.instantie_volgnr) in ($SEQ_ZORM_TYPE))
+into $TXT_00_DOELEN_BHP</code>
+         <compiledcode>
+            <sql>/* oude code
+SELECT DISTINCT substr(nos.instantie_volgnr,0,3), xnt_query_pkg.node_waarde(nos.seq_xnt_model_data,'mmoBehandeldoel_RWLoc' , substr(nos.instantie_volgnr,0,3)) 
+
+FROM   xnt_node_specialisme nos
+WHERE
+	seq_xnt_model_data = $SEQLAATSTEBHP
+			and nos.alias='hcDiscipline_RWLoc'
+	and xnt_query_pkg.node_keuzes_code(nos.seq_xnt_model_data,'hcDiscipline_RWLoc' , nos.instantie_volgnr) in ($SEQ_ZORM_TYPE)
+order by 2
+*/
+  SELECT LISTAGG('[X] ' || test, chr(10)) WITHIN GROUP (ORDER BY test DESC) "Product_Listing"
+   from (select
+  DISTINCT xnt_query_pkg.node_waarde(nos.seq_xnt_model_data,'mmoBehandeldoel_RWLoc' , substr(nos.instantie_volgnr,0,3)) as test
+  from xnt_node_specialisme nos
+WHERE
+	seq_xnt_model_data = @1
+			and nos.alias='hcDiscipline_RWLoc'
+	and xnt_query_pkg.node_keuzes_code(nos.seq_xnt_model_data,'hcDiscipline_RWLoc' , nos.instantie_volgnr) in (@2))
+</sql>
+            <bindlist>
+               <bind idx="1">SEQLAATSTEBHP</bind>
+               <bind idx="2">SEQ_ZORM_TYPE</bind>
+            </bindlist>
+            <intolist>
+               <into idx="1">TXT_00_DOELEN_BHP</into>
+            </intolist>
+         </compiledcode>
+      </query>
+      <query id="x1566304471870V0" alias="QRY_BHPNRDT">
+         <name>QRY_BHPNRDT</name>
+         <code>select nrbhp ||' (' || (select TO_CHAR(TO_DATE(waarde,'YYYY-MM-DD HH24.MI.SS'), 'DD-MM-YYYY') from xnt_node_specialisme xns where xns.seq_xnt_model_data = $SEQLAATSTEBHP and ALIAS = 'dBehandelplan_RWLoc') || ')'  as BEHANDELPLAN
+from (
+select to_char(count(seq_xnt_model_data)) as nrbhp
+from xnt_node_specialisme xns
+, xnt_model_versie xmv
+, xnt_model xm
+where xns.seq_xnt_model_versie = xmv.seq_xnt_model_versie
+and xm.seq_xnt_model in (2116)
+and xmv.seq_xnt_model = xm.seq_xnt_model
+and xns.seq_patient = $patient
+and alias = 'top')
+
+into $TXT_00_BHP_NRDT</code>
+         <compiledcode>
+            <sql>select nrbhp ||' (' || (select TO_CHAR(TO_DATE(waarde,'YYYY-MM-DD HH24.MI.SS'), 'DD-MM-YYYY') from xnt_node_specialisme xns where xns.seq_xnt_model_data = @1 and ALIAS = 'dBehandelplan_RWLoc') || ')'  as BEHANDELPLAN
+from (
+select to_char(count(seq_xnt_model_data)) as nrbhp
+from xnt_node_specialisme xns
+, xnt_model_versie xmv
+, xnt_model xm
+where xns.seq_xnt_model_versie = xmv.seq_xnt_model_versie
+and xm.seq_xnt_model in (2116)
+and xmv.seq_xnt_model = xm.seq_xnt_model
+and xns.seq_patient = @2
+and alias = 'top')
+
+</sql>
+            <bindlist>
+               <bind idx="1">SEQLAATSTEBHP</bind>
+               <bind idx="2">patient</bind>
+            </bindlist>
+            <intolist>
+               <into idx="1">TXT_00_BHP_NRDT</into>
+            </intolist>
+         </compiledcode>
+      </query>
+      <query id="x1566482698951V0" alias="QRY_ZORGLEVERING">
+         <name>QRY_ZORGLEVERING</name>
+         <code>select dim_zorglevering from dwh_user.vw_fct_zorglevering
+where dim_zorglevering = $zorglevering
+and to_date(dwh_user.VW_FCT_ZORGLEVERING.DIM_DAG, 'yyyymmdd') = trunc(sysdate)
+
+into $SEQ_00_ZORGLEVERING</code>
+         <compiledcode>
+            <sql>select dim_zorglevering from dwh_user.vw_fct_zorglevering
+where dim_zorglevering = @1
+and to_date(dwh_user.VW_FCT_ZORGLEVERING.DIM_DAG, 'yyyymmdd') = trunc(sysdate)
+
+</sql>
+            <bindlist>
+               <bind idx="1">zorglevering</bind>
+            </bindlist>
+            <intolist>
+               <into idx="1">SEQ_00_ZORGLEVERING</into>
+            </intolist>
+         </compiledcode>
+      </query>
+      <query id="x1566883770596V0" alias="QRY_ROL_DEFINITIEF_MAKEN">
+         <name>QRY_ROL_DEFINITIEF_MAKEN</name>
+         <code>select case when '$user' = 'APPL' or '$user' = 'SUPPORTNEXUS' then 'J' -- TESTWAARDE VOOR NEXUS MEDEWERKER 'SUPPORTNEXUS'
+       else decode(count(rol),0,'N','J') 
+       end as jn_rol
+from   (
+  select  distinct rol.c_rol rol
+  from    aut_rol            rol
+    ,     aut_rol_gebruiker  rgb
+    ,     aut_scherm_rol     rsm
+    ,     meta_gebruiker     mgb
+    ,     alg_persoon        psn
+    ,     meta_scherm        msm
+  where   rol.seq_aut_rol        = rgb.seq_aut_rol
+--    and   rol.seq_aut_rol        = rsm.seq_aut_rol
+    and   rgb.seq_meta_gebruiker = mgb.seq_meta_gebruiker
+    and   mgb.seq_alg_persoon    = psn.seq_alg_persoon
+    and   rsm.seq_meta_scherm    = msm.seq_meta_scherm
+    and   (mgb.c_gebruiker = '$user'
+           or rol.c_rol    = '$user'
+          )
+    and   rol.c_rol in ('FG_D_CP','--ALLES')
+)
+
+into $JN_ROL_DEFINITIEF_MAKEN</code>
+         <compiledcode>
+            <sql>select case when '@1' = 'APPL' or '@1' = 'SUPPORTNEXUS' then 'J' -- TESTWAARDE VOOR NEXUS MEDEWERKER 'SUPPORTNEXUS'
+       else decode(count(rol),0,'N','J') 
+       end as jn_rol
+from   (
+  select  distinct rol.c_rol rol
+  from    aut_rol            rol
+    ,     aut_rol_gebruiker  rgb
+    ,     aut_scherm_rol     rsm
+    ,     meta_gebruiker     mgb
+    ,     alg_persoon        psn
+    ,     meta_scherm        msm
+  where   rol.seq_aut_rol        = rgb.seq_aut_rol
+--    and   rol.seq_aut_rol        = rsm.seq_aut_rol
+    and   rgb.seq_meta_gebruiker = mgb.seq_meta_gebruiker
+    and   mgb.seq_alg_persoon    = psn.seq_alg_persoon
+    and   rsm.seq_meta_scherm    = msm.seq_meta_scherm
+    and   (mgb.c_gebruiker = '@1'
+           or rol.c_rol    = '@1'
+          )
+    and   rol.c_rol in ('FG_D_CP','--ALLES')
+)
+
+</sql>
+            <bindlist>
+               <bind idx="1">user</bind>
+            </bindlist>
+            <intolist>
+               <into idx="1">JN_ROL_DEFINITIEF_MAKEN</into>
+            </intolist>
+         </compiledcode>
+      </query>
+      <query id="x1570689994257V0" alias="QRY_OPMERKING">
+         <name>QRY_OPMERKING</name>
+         <code>SELECT LISTAGG('[X] ' || test, chr(10)) WITHIN GROUP (ORDER BY test DESC) "Product_Listing"
+   from (select
+  DISTINCT xnt_query_pkg.node_waarde(nos.seq_xnt_model_data,'TXT_00_OPMERKING' , substr(nos.instantie_volgnr,0)) as test
+  from xnt_node_specialisme nos
+WHERE
+	seq_xnt_model_data = $SEQLAATSTEBHP
+			and nos.alias='hcDiscipline_RWLoc'
+	and xnt_query_pkg.node_keuzes_code(nos.seq_xnt_model_data,'hcDiscipline_RWLoc' , nos.instantie_volgnr) in ($SEQ_ZORM_TYPE))
+
+into $TXT_00_OPMERKINGHB</code>
+         <compiledcode>
+            <sql>SELECT LISTAGG('[X] ' || test, chr(10)) WITHIN GROUP (ORDER BY test DESC) "Product_Listing"
+   from (select
+  DISTINCT xnt_query_pkg.node_waarde(nos.seq_xnt_model_data,'TXT_00_OPMERKING' , substr(nos.instantie_volgnr,0)) as test
+  from xnt_node_specialisme nos
+WHERE
+	seq_xnt_model_data = @1
+			and nos.alias='hcDiscipline_RWLoc'
+	and xnt_query_pkg.node_keuzes_code(nos.seq_xnt_model_data,'hcDiscipline_RWLoc' , nos.instantie_volgnr) in (@2))
+
+</sql>
+            <bindlist>
+               <bind idx="1">SEQLAATSTEBHP</bind>
+               <bind idx="2">SEQ_ZORM_TYPE</bind>
+            </bindlist>
+            <intolist>
+               <into idx="1">TXT_00_OPMERKINGHB</into>
+            </intolist>
+         </compiledcode>
+      </query>
+      <query id="x1581598624510V0" alias="QRY_ZVL">
+         <name>QRY_ZVL</name>
+         <code>select syntax.zorgverlener(seq_alg_zorgverlener,'M')
+from alg_zorgverlener 
+where c_zorgverlener = '$user'
+
+into $TXT_00_BNAAM</code>
+         <compiledcode>
+            <sql>select syntax.zorgverlener(seq_alg_zorgverlener,'M')
+from alg_zorgverlener 
+where c_zorgverlener = '@1'
+
+</sql>
+            <bindlist>
+               <bind idx="1">user</bind>
+            </bindlist>
+            <intolist>
+               <into idx="1">TXT_00_BNAAM</into>
+            </intolist>
+         </compiledcode>
+      </query>
+   </queries>
+   <summaries id="summaries"/>
+</top>
